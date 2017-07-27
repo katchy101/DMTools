@@ -1,18 +1,60 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
+    <ion-navbar>
+        <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+        <ion-title>Dashboard</ion-title>
+    </ion-navbar>
+    <!-- <ion-toolbar class="sub-header">
+        <ion-title>
+            Campaigns
+        </ion-title>
+    </ion-toolbar> -->
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content>
+    <ion-row no-padding class="section full">
+        <ion-col [ngStyle]="{ 'background-image' : 'url(' + activeBg + ')'}" class="img-bg">
+            <ion-row class="middle">
+                <ion-col>
+                    <ion-list class="scroll-look">
+                        <ion-item *ngFor="let test of tests" (click)="changeBg(test.locationImage);">
+                            <ion-row>
+                                <ion-col col-3 class="area" [ngStyle]="{ 'background-image' : 'url(' + test.locationImage + ')'}">
+                                    &nbsp;
+                                </ion-col>
+                                <ion-col col-9>
+                                    <ion-row class="header">
+                                        <ion-col>
+                                            <ion-row>
+                                                <ion-col>
+                                                    <h3>{{test.title}}</h3>
+                                                </ion-col>
+                                            </ion-row>
+                                        </ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col class="party-list">
+                                            <ion-row>
+                                                <ion-col class="member" *ngFor="let partyMember of test.party">
+                                                    <ion-row>
+                                                        <ion-col>
+                                                            <ion-avatar>
+                                                                <img src="{{partyMember.memberImg}}">
+                                                            </ion-avatar>
+                                                        </ion-col>
+                                                    </ion-row>
+                                                </ion-col>
+                                            </ion-row>
+                                        </ion-col>
+                                    </ion-row>
+                                </ion-col>
+                            </ion-row>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+                        </ion-item>
+                    </ion-list>
+                </ion-col>
+            </ion-row>
+        </ion-col>
+    </ion-row>
 </ion-content>

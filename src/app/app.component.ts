@@ -5,20 +5,27 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { WelcomePage } from "../pages/pages";
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
+  loginImg: string;
+  tests = [{}, {}, {}];
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = HomePage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{ title: string, component: any }>;
+
+
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
-    this.initializeApp();
+    this.loginImg = "http://i.imgur.com/4LWwYU2.jpg";
 
+    this.initializeApp();
+    // this.splitCheck();
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
@@ -34,6 +41,20 @@ export class MyApp {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+  }
+
+
+  splitCheck() {
+    // console.log(this.pages);
+    // switch (this.pages) {
+    //   case value:
+
+    //     break;
+
+    //   default:
+    //     break;
+    // }
+    return false;
   }
 
   openPage(page) {
