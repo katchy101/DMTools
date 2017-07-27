@@ -2,19 +2,34 @@
     <!--  our side menu  -->
     <ion-menu [content]="content">
         <ion-header>
+            <!--    <ion-toolbar>
+                <ion-item>
+                    <ion-avatar>
+                        <img src="./assets/images/testAssets/elf_01.jpg" alt="">
+                    </ion-avatar>
+                </ion-item>
+            </ion-toolbar> -->
             <ion-toolbar>
-                <ion-title></ion-title>
+                <ion-title>Menu</ion-title>
             </ion-toolbar>
         </ion-header>
         <ion-content padding>
             <ion-list>
-                <ion-item *ngFor="let page of pages">
-                    <ion-icon>
-                        et
-                    </ion-icon>
-                    <h2>Finn</h2>
-                    <h3>Don't Know What To Do!</h3>
-                    <p>I've had a pretty messed up day. If we just...</p>
+                <ion-item *ngFor="let section of sections">
+                    <ion-row class="header">
+                        <ion-col>
+                            <h2>{{section.title}}</h2>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-list>
+                            <ion-item *ngFor="let page of section.pages">
+                                <button ion-button clear (click)="openPage(page)">
+                                  {{page.title}}
+                                </button>
+                            </ion-item>
+                        </ion-list>
+                    </ion-row>
                 </ion-item>
             </ion-list>
         </ion-content>

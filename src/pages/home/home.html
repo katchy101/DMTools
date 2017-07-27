@@ -18,9 +18,9 @@
             <ion-row class="middle">
                 <ion-col>
                     <ion-list class="scroll-look">
-                        <ion-item *ngFor="let test of tests" (click)="changeBg(test.locationImage);">
+                        <ion-item *ngFor="let campaign of campaigns" (click)="selectCampaign(campaign);">
                             <ion-row>
-                                <ion-col col-3 class="area" [ngStyle]="{ 'background-image' : 'url(' + test.locationImage + ')'}">
+                                <ion-col col-3 class="area" [ngStyle]="{ 'background-image' : 'url(' + campaign.locationImage + ')'}">
                                     &nbsp;
                                 </ion-col>
                                 <ion-col col-9>
@@ -28,7 +28,7 @@
                                         <ion-col>
                                             <ion-row>
                                                 <ion-col>
-                                                    <h3>{{test.title}}</h3>
+                                                    <h3>{{campaign.title}}</h3>
                                                 </ion-col>
                                             </ion-row>
                                         </ion-col>
@@ -36,7 +36,7 @@
                                     <ion-row>
                                         <ion-col class="party-list">
                                             <ion-row>
-                                                <ion-col class="member" *ngFor="let partyMember of test.party">
+                                                <ion-col class="member" *ngFor="let partyMember of campaign.party">
                                                     <ion-row>
                                                         <ion-col>
                                                             <ion-avatar>

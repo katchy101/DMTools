@@ -1,0 +1,21 @@
+page-campaign {
+    .party {
+        text-align: center;
+        width: 100%;
+        .member {
+            .item {
+                text-align: center;
+                background-color: transparent;
+                .portrait {
+                    ion-avatar {
+                        img {
+                            height: 20vh;
+                            width: 20vh;
+                        }
+                    }
+                    .details {}
+                }
+            }
+        }
+    }
+}

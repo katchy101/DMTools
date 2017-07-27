@@ -5,12 +5,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
-import { WelcomePage } from "../pages/pages";
+import { WelcomePage, MonstersPage } from "../pages/pages";
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
+  sections: Array<any> = []
   loginImg: string;
   tests = [{}, {}, {}];
   @ViewChild(Nav) nav: Nav;
@@ -25,10 +26,36 @@ export class MyApp {
     this.loginImg = "http://i.imgur.com/4LWwYU2.jpg";
 
     this.initializeApp();
-    // this.splitCheck();
-    // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'Home', component: HomePage }
+    this.sections = [
+      {
+        "title": "Campaign",
+        "bgImage": "",
+        "pages": [
+          { title: 'Home', component: HomePage },
+        ]
+      },
+      {
+        "title": "Monsters",
+        "bgImage": "",
+        "pages": [
+          { title: 'List', component: MonstersPage }
+        ]
+      },
+      {
+        "title": "Characters",
+        "bgImage": "",
+        "pages": [
+          { title: 'List', component: MonstersPage }
+        ]
+      },
+      {
+        "title": "Characters",
+        "bgImage": "",
+        "pages": [
+          { title: 'List', component: MonstersPage }
+        ]
+      },
+
     ];
 
   }
@@ -44,15 +71,6 @@ export class MyApp {
 
 
   splitCheck() {
-    // console.log(this.pages);
-    // switch (this.pages) {
-    //   case value:
-
-    //     break;
-
-    //   default:
-    //     break;
-    // }
     return false;
   }
 

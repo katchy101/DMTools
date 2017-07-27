@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { CampaignPage } from "../pages";
 
 @Component({
   selector: 'page-home',
@@ -9,7 +10,7 @@ export class HomePage {
   activeBg: string = "";
   splitCheck = true;
 
-  tests: Array<any> = [{
+  campaigns: Array<any> = [{
     "title": "The Fallen",
     "locationImage": "./assets/images/testAssets/dark_town.jpg",
     "party": [
@@ -59,6 +60,10 @@ export class HomePage {
     this.activeBg = "./assets/images/testAssets/dark_town.jpg";
   }
 
+
+  selectCampaign(campaign) {
+    this.navCtrl.push(CampaignPage, { "campaign": campaign });
+  }
   changeBg(image) {
     this.activeBg = image;
   }

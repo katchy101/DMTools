@@ -33,9 +33,14 @@
                     background-repeat: no-repeat;
                     ion-list {
                         ion-item {
+                            border: none !important;
+                            background-color: transparent;
                             min-height: 5vh;
                             margin-bottom: 2vh;
                             border-radius: 15px;
+                            .header {
+                                border-bottom: 1px solid #000;
+                            }
                         }
                     }
                 }

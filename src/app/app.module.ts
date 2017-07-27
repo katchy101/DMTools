@@ -4,13 +4,15 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { HomePage, ListPage, WelcomePage } from "../pages/pages";
+import { HomePage, ListPage, WelcomePage, MonstersPage, CampaignPage } from "../pages/pages";
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListPage,
+    MonstersPage,
+    CampaignPage,
     WelcomePage
   ],
   imports: [
@@ -22,6 +24,8 @@ import { HomePage, ListPage, WelcomePage } from "../pages/pages";
     MyApp,
     HomePage,
     ListPage,
+    MonstersPage,
+    CampaignPage,
     WelcomePage
   ],
   providers: [
