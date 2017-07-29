@@ -21,7 +21,6 @@
                         <ion-item *ngFor="let campaign of campaigns" (click)="selectCampaign(campaign);">
                             <ion-row>
                                 <ion-col col-3 class="area" [ngStyle]="{ 'background-image' : 'url(' + campaign.locationImage + ')'}">
-                                    &nbsp;
                                 </ion-col>
                                 <ion-col col-9>
                                     <ion-row class="header">

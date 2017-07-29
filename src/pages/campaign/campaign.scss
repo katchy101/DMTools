@@ -3,17 +3,46 @@ page-campaign {
         text-align: center;
         width: 100%;
         .member {
+            margin: 2vh auto;
             .item {
+                padding-bottom: 2vh;
                 text-align: center;
                 background-color: transparent;
                 .portrait {
                     ion-avatar {
+                        max-width: 20vh;
+                        max-height: 100%;
+                        margin: auto;
+                        .hover-stat {
+                            position: absolute;
+                            margin: 2vh 0px;
+                            .heart {
+                                color: red;
+                                background-image: url('../../assets/images/testAssets/heart.png');
+                                background-size: contain;
+                                height: 8vh;
+                                width: 8vh;
+                            }
+                            .armor {
+                                background-image: url('../../assets/images/testAssets/sheild.png');
+                                background-size: contain;
+                                height: 8vh;
+                                width: 8vh;
+                                float: right;
+                                bottom: 0%;
+                            }
+                        }
                         img {
+                            margin: auto;
                             height: 20vh;
                             width: 20vh;
                         }
                     }
-                    .details {}
+                    .details {
+                        h4 {
+                            text-align: left;
+                        }
+                    }
                 }
             }
         }

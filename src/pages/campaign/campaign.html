@@ -12,33 +12,30 @@
 
     <ion-row class="party">
         <ion-col class="member" *ngFor="let member of campaign.party">
-            <ion-item>
+            <ion-item class="phb">
                 <ion-row>
                     <ion-col text-center class="portrait">
                         <ion-avatar>
-                            <img src="{{member.memberImg}}" alt="">
+                            <div class="hover-stat">
+                                <div class="heart">
+                                    <p>
+                                        20
+                                    </p>
+                                </div>
+                                <div class="armor">
+                                    <p>
+                                        21
+                                    </p>
+                                </div>
+                            </div>
+                            <img src="{{member.memberImg}} " alt=" ">
+
                         </ion-avatar>
                     </ion-col>
                 </ion-row>
                 <ion-row>
-                    <ion-col class="details">
-                        <ion-row>
-                            <ion-col>
-                                <h3>
-                                    NAME
-                                </h3>
-                            </ion-col>
-                        </ion-row>
-                        <ion-row>
-                            <ion-col>
-                                CLASS
-                            </ion-col>
-                        </ion-row>
-                        <ion-row>
-                            <ion-col>
-                                LEVEL
-                            </ion-col>
-                        </ion-row>
+                    <ion-col class="details ">
+                        <p>Details block</p>
                     </ion-col>
                 </ion-row>
             </ion-item>

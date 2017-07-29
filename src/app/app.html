@@ -1,35 +1,36 @@
-<ion-split-pane [when]="true">
+<ion-split-pane [when]="split">
     <!--  our side menu  -->
     <ion-menu [content]="content">
         <ion-header>
-            <!--    <ion-toolbar>
-                <ion-item>
-                    <ion-avatar>
-                        <img src="./assets/images/testAssets/elf_01.jpg" alt="">
-                    </ion-avatar>
-                </ion-item>
-            </ion-toolbar> -->
             <ion-toolbar>
                 <ion-title>Menu</ion-title>
             </ion-toolbar>
         </ion-header>
-        <ion-content padding>
+        <ion-content padding class="phb">
             <ion-list>
                 <ion-item *ngFor="let section of sections">
-                    <ion-row class="header">
-                        <ion-col>
+                    <ion-row no-padding class="header">
+                        <ion-col no-padding>
                             <h2>{{section.title}}</h2>
                         </ion-col>
                     </ion-row>
                     <ion-row>
-                        <ion-list>
-                            <ion-item *ngFor="let page of section.pages">
-                                <button ion-button clear (click)="openPage(page)">
-                                  {{page.title}}
+                        <ion-col no-padding>
+                            <ion-row no-padding>
+                                <ion-list>
+                                    <ion-item *ngFor="let page of section.pages">
+                                        <button ion-button clear (click)="openPage(page)">
+                                  <h4>{{page.title}}</h4>
                                 </button>
-                            </ion-item>
-                        </ion-list>
+                                    </ion-item>
+                                </ion-list>
+                            </ion-row>
+                        </ion-col>
+                        <ion-col class="menu-bg" [ngStyle]="{ 'background-image' : 'url(' + section.bgImage + ')'}">
+                            &nbsp;
+                        </ion-col>
                     </ion-row>
+
                 </ion-item>
             </ion-list>
         </ion-content>

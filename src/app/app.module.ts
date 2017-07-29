@@ -4,16 +4,27 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { HomePage, ListPage, WelcomePage, MonstersPage, CampaignPage } from "../pages/pages";
+
+import {
+  HomePage,
+  ListPage,
+  WelcomePage,
+  MonstersPage,
+  CampaignPage,
+  CreateCharacterPage,
+  TestPage
+} from "../pages/pages";
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListPage,
-    MonstersPage,
+    TestPage,
+    WelcomePage,
     CampaignPage,
-    WelcomePage
+    CreateCharacterPage,
+    MonstersPage,
   ],
   imports: [
     BrowserModule,
@@ -24,9 +35,11 @@ import { HomePage, ListPage, WelcomePage, MonstersPage, CampaignPage } from "../
     MyApp,
     HomePage,
     ListPage,
-    MonstersPage,
+    TestPage,
+    WelcomePage,
     CampaignPage,
-    WelcomePage
+    CreateCharacterPage,
+    MonstersPage
   ],
   providers: [
     StatusBar,
