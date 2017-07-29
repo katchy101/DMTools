@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>{{campaign.title}}s</ion-title>
+    </ion-navbar>
+    <!-- <ion-toolbar class="sub-header">
+        <ion-title>
+            Campaigns
+        </ion-title>
+    </ion-toolbar> -->
+</ion-header>
+<ion-content [ngStyle]="{ 'background-image' : 'url(' + activeBg + ')'}" class="img-bg">
+
+    <ion-row class="party">
+        <ion-col class="member" *ngFor="let member of campaign.party">
+            <ion-item class="phb">
+                <ion-row>
+                    <ion-col text-center class="portrait">
+                        <ion-avatar>
+                            <div class="hover-stat">
+                                <div class="heart">
+                                    <p>
+                                        20
+                                    </p>
+                                </div>
+                                <div class="armor">
+                                    <p>
+                                        21
+                                    </p>
+                                </div>
+                            </div>
+                            <img src="{{member.memberImg}} " alt=" ">
+
+                        </ion-avatar>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col class="details ">
+                        <p>Details block</p>
+                    </ion-col>
+                </ion-row>
+            </ion-item>
+        </ion-col>
+    </ion-row>
+</ion-content>
